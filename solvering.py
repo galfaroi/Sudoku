@@ -13,8 +13,7 @@ def main():
     row=0; col=0; 
 
     
- 
-#check for correct board size
+ #check for correct board size
     assert arr.size  == 81
    
     print "Sudoku to solve:"
@@ -27,7 +26,7 @@ def main():
     else: 
         print "no solution"
 
-
+#looks for blanks (0's)
 def findBlanks(board, row, col):
    nx, ny = board.shape
   
@@ -38,6 +37,7 @@ def findBlanks(board, row, col):
                return row, col
    return False 
 
+#check if is not collision in the row with the same number
 def checkRow(board, row, num):
 
     slice = board[row,0:9]
@@ -48,6 +48,7 @@ def checkRow(board, row, num):
          
     return False
 
+#checks for column for collision with the same number 
 def checkCol(board, col, num):
     slice = board[0:9,col]
     
