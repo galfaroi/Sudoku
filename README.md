@@ -3,7 +3,7 @@ Sudoku
 
 This Sudoku solver uses Backtracking for solving, it is programed in Python and uses Numpy narray as main data structure for the board. 
 
-For run in your command line:
+For running in your command line:
 
 $python solvering.py
 
