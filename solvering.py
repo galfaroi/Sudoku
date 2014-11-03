@@ -5,8 +5,8 @@ def main():
  
 #load numpy array from csv two default options of games
     #arr=np.loadtxt('sudoeasy.csv', delimiter=',')
-    arr=np.loadtxt('sudoku.csv', delimiter=',')
-
+    #arr=np.loadtxt('sudoku.csv', delimiter=',')
+    arr=np.loadtxt('unsolvable.csv', delimiter=',')
 #cast the array to int for efficiency  and leave original array inmutable
     board=arr.astype(int)
     global row, col
@@ -16,6 +16,7 @@ def main():
  #check for correct board size
     assert arr.size  == 81
    
+    print ""
     print "Sudoku to solve:"
     print board
     print ""
@@ -24,7 +25,7 @@ def main():
         print "Solution:"
 	print board
     else: 
-        print "no solution"
+        print "No solution!"
 
 #looks for blanks (0's)
 def findBlanks(board, row, col):
