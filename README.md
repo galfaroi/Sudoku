@@ -1,7 +1,7 @@
 Sudoku
 ======
 
-This Sudoku solver uses Backtracking for solving, it is programed in Python andas uses Numpy narray as main data structure for the board. 
+This Sudoku solver uses Backtracking for solving, it is programed in Python and uses Numpy narray as main data structure for the board. 
 
 For run in your command line:
 
