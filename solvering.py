@@ -1,15 +1,17 @@
 #import pdb
 import numpy as np
+#import time
 
 def main():
  
 #load numpy array from csv two default options of games
     #arr=np.loadtxt('sudoeasy.csv', delimiter=',')
-    #arr=np.loadtxt('sudoku.csv', delimiter=',')
-    arr=np.loadtxt('unsolvable.csv', delimiter=',')
+    arr=np.loadtxt('sudoku.csv', delimiter=',')
+    #arr=np.loadtxt('unsolvable.csv', delimiter=',')
+
 #cast the array to int for efficiency  and leave original array inmutable
     board=arr.astype(int)
-    global row, col
+    #global row, col
     row=0; col=0; 
 
     
@@ -18,12 +20,16 @@ def main():
    
     print ""
     print "Sudoku to solve:"
-    print board
+    print board 
     print ""
   
+    #start_time=time.time()
     if solve(board,row, col)  == True:
         print "Solution:"
+	#elapsed_time=time.time()	
 	print board
+	#print 'Execution time: %.3f' %elapsed_time
+        
     else: 
         print "No solution!"
 
@@ -70,12 +76,13 @@ def checks(board, row, col, num):
 
     return not checkRow(board, row, num) and not checkCol(board, col, num) and not checkBox(board, row-(row%3), col-(col%3), num)
   
-
+#solve sudoku function
 def solve(board, row, col):
   
     row
     col
 
+#find the blank spaces to fill (0's)
     if not findBlanks(board, row, col):
 	return True
    
